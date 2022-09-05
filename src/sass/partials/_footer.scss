@@ -1,0 +1,27 @@
+.footer {
+  font-family: "Roboto Mono", monospace;
+  color: #757575;
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  position: fixed;
+  left: 0px;
+  bottom: 0;
+  width: 98%;
+  border-top: 1px solid #757575;
+  border-bottom: 1px solid #757575;
+
+  .footer-logo {
+    font-family: "Russo One", sans-serif;
+    font-size: 25px;
+    float: left;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+  .footer-text {
+    flex-grow: 2;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-top: 5px;
+  }
+}

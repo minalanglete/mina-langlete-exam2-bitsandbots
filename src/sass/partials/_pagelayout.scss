@@ -1,0 +1,51 @@
+.container-cart,
+.container-checkout {
+  width: 500px;
+  margin: auto;
+  margin-top: 70px;
+
+  h1 {
+    color: #d922ff;
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+  .container-checkout-card {
+    background-color: #6820ff;
+  }
+  .icon-cart,
+  .icon-checkout {
+    font-size: 50px;
+    background: linear-gradient(to bottom, #1f2127 20%, #6820ff 0%);
+    width: 500px;
+    padding-bottom: 10px;
+  }
+  .icon-checkout {
+    padding-bottom: 20px;
+  }
+  .checkout-incart {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 1px;
+  }
+}
+.checkout {
+  background-color: #6820ff;
+  text-align: center;
+  padding: 20px;
+
+  .checkout-button {
+    color: #d922ff;
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+}

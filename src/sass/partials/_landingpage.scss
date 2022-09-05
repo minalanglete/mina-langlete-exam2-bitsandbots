@@ -1,0 +1,112 @@
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.landingpage-registrer-text {
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-bottom: -20px;
+}
+.container-landingpage-form {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .landingpage-form {
+    height: 500px;
+
+    border: none;
+
+    .tab-content {
+      height: 200px;
+      background-color: #6820ff;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+
+    .landingform-tabs {
+      width: 100%;
+      gap: 40px;
+    }
+
+    button {
+      color: #d922ff;
+      text-transform: uppercase;
+      border: none;
+      padding: 10px 20px 10px 20px;
+      font-weight: bold;
+      width: 200px;
+    }
+    button:hover {
+      color: #d922ff;
+      background-color: #6820ff;
+    }
+
+    .active {
+      color: #fff;
+      background-color: #6820ff;
+      border: none;
+    }
+  }
+  .form-login {
+    padding: 40px;
+
+    .form-loginbutton-container {
+      padding-left: 130px;
+    }
+
+    .form-loginbutton-button {
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+      color: #d922ff;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    a:visited {
+      color: #d922ff;
+    }
+    a:hover {
+      color: #fff;
+    }
+
+    .form-login-line {
+      padding-bottom: 10px;
+      text-align: right;
+      padding-right: 30px;
+
+      label {
+        padding-right: 20px;
+        font-family: "Russo One", sans-serif;
+        letter-spacing: 1px;
+      }
+      input {
+        border-radius: 5px;
+        border: none;
+        height: 40px;
+        width: 200px;
+      }
+    }
+  }
+}
+////////// login-form

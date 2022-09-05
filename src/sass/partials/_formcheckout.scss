@@ -1,0 +1,40 @@
+.form-checkout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  text-align: right;
+  font-family: "Roboto Mono", monospace;
+
+  .form-checkout-line {
+    padding-bottom: 15px;
+  }
+
+  label {
+    padding-right: 10px;
+  }
+  input {
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 200px;
+  }
+  .pay-button {
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    color: #d922ff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  a:visited {
+    color: #d922ff;
+  }
+  .pay-container {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}

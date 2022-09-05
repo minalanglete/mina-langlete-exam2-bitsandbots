@@ -1,0 +1,83 @@
+.container-nav {
+  background-color: #6820ff;
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  padding: 0px;
+  padding-left: 10px;
+
+  .nav-link {
+    padding: 0px;
+    margin: 0px;
+  }
+  .nav-link:hover {
+    background-color: #d922ff;
+  }
+
+  .nav-line {
+    margin: auto;
+    width: 100%;
+
+    p {
+      margin-bottom: 0px;
+    }
+    .nav-line1 {
+      display: flex;
+      gap: 200px;
+      height: 60px;
+      margin: auto;
+      max-width: 100%;
+
+      .nav-link {
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 10px;
+        color: #ffffff;
+        margin-right: 100px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .nav-button {
+        float: right;
+        margin-top: 30px;
+
+        button {
+          background-color: #6820ff;
+          border: none;
+          color: #ffffff;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-transform: uppercase;
+          margin-right: 20px;
+        }
+        button:hover {
+          background-color: #d922ff;
+          border-radius: 10px;
+        }
+      }
+    }
+    .nav-line2 {
+      padding-left: 227px;
+      padding-top: 10px;
+      color: #ffffff;
+    }
+  }
+  .nav-logo {
+    font-size: 60px;
+    padding: 0px;
+    font-family: "Russo One", sans-serif;
+
+    .nav-logo-slogan {
+      font-family: "Roboto Mono", monospace;
+      font-size: 20px;
+      font-weight: 400;
+      background-color: #6820ff;
+    }
+  }
+}
+.active {
+  background-color: #d922ff;
+  color: #ffffff;
+}
