@@ -68,7 +68,13 @@ function GamesList() {
             <img src={game.screenshots[0].url} alt="logo" className="games-img" />
             <div className="games-title">
               <div className="games-title-name">{game.name}</div>
-              <FontAwesomeIcon icon={faCartShopping} className="games-icon" />
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                className="games-icon"
+                onClick={() => {
+                  localStorage.setItem("addcartID", JSON.stringify(game.id));
+                }}
+              />
             </div>
 
             <button className="games-button">View more</button>

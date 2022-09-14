@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-const url = "https://noroffcors.herokuapp.com/https://api.igdb.com/v4/games";
+const url = "https://noroffcors.herokuapp.com/https://api.igdb.com/v4/games/";
 
 function Games() {
   const [games, setGames] = useState([]);

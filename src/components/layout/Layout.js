@@ -27,7 +27,11 @@ function Layout() {
                 </NavLink>
               </Nav>
               <div className="nav-button">
-                <button>log out</button>
+                <button>
+                  <a href="/" className="button-logout">
+                    log out
+                  </a>
+                </button>
               </div>
             </Navbar.Collapse>
           </div>

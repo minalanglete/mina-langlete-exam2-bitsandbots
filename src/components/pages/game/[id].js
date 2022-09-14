@@ -1,22 +1,17 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const url = "https://noroffcors.herokuapp.com/https://api.igdb.com/v4/games";
+const url = "https://noroffcors.herokuapp.com/https://api.igdb.com/v4/games/";
 
 function GameId() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  let history = Navigate();
-
   const { id } = useParams();
-
-  if (!id) {
-    history.push("/home");
-  }
+  console.log(id);
 
   useEffect(function () {
     async function fetchData() {
@@ -27,7 +22,7 @@ function GameId() {
             Authorization: "Bearer 82bnqgof1fmue5aeq7k61i6l7mg5gm",
           },
           method: "POST",
-          body: "fields name, genres, screenshots.*; where id = ({id}); ",
+          body: "fields name, summary, screenshots.*; where id =(" + id + ");",
         });
 
         if (response.ok) {
@@ -69,14 +64,15 @@ function GameId() {
   }
 
   return (
-    <div className="container-games-list">
+    <div className="container-game-detail">
       {games.map(function (game) {
         return (
-          <div key={game.id} id={game.id} className="games">
-            <img src={game.screenshots[0].url} alt="logo" className="games-img" />
-            <div className="games-title">
-              <div className="games-title-name">{game.name}</div>
-              <FontAwesomeIcon icon={faCartShopping} className="games-icon" />
+          <div key={game.id} id={game.id} className="game">
+            <div className="game-title">
+              <img src={game.screenshots[0].url} alt="logo" className="game-img" />
+              <div className="game-title-name">{game.name}</div>
+              <p>{game.summary}</p>
+              <FontAwesomeIcon icon={faCartShopping} className="games-icon" /> add to cart
             </div>
           </div>
         );

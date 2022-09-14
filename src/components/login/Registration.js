@@ -23,16 +23,17 @@ class Register extends React.Component {
 
       password: this.state.password,
     };
-    let olddata = localStorage.getItem("formdata");
+    let olddata = localStorage.getItem("userdata");
+    console.log(olddata);
+
     if (olddata == null) {
       olddata = [];
       olddata.push(ob);
-      localStorage.setItem("formdata", JSON.stringify(olddata));
+      localStorage.setItem("userdata", JSON.stringify(olddata));
     } else {
       let oldArr = JSON.parse(olddata);
       oldArr.push(ob);
-      localStorage.setItem("formdata", JSON.stringify(oldArr));
-      console.log(oldArr, "hhg");
+      localStorage.setItem("userdata", JSON.stringify(oldArr));
     }
   };
 
