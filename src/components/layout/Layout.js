@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Cart from "../pages/Cart";
 import LandingPage from "../pages/LandingPage";
 import Checkout from "../pages/Checkout";
+import GameId from "../pages/game/[id]";
 
 function Layout() {
   return (
@@ -42,7 +43,7 @@ function Layout() {
           <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/book/[id]" />
+          <Route path="/game/:id" element={<GameId />} />
         </Routes>
       </Container>
     </Router>

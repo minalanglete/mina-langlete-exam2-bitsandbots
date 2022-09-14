@@ -6,7 +6,7 @@ import Footer from "../layout/Footer";
 
 export default function Checkout() {
   return (
-    <div className="container-checkout">
+    <div className="container-checkout content-wrap">
       <Heading title="Checkout" />
       <div className="container-checkout-card">
         <FontAwesomeIcon icon={faCartShopping} className="icon-checkout" />

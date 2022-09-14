@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import img from "../../logo.svg";
 
-const url = "https://noroffcors.herokuapp.com/api.igdb.com/v4/games";
+const url = "https://noroffcors.herokuapp.com/https://api.igdb.com/v4/games";
 
 function GamesList() {
   const [games, setGames] = useState([]);
@@ -12,18 +12,15 @@ function GamesList() {
 
   useEffect(function () {
     async function fetchData() {
-      const options = {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Client-ID": "zbjrsqbdwq9f0c2kgsc8fqynng1hwa",
-          Authorization: "Bearer 82bnqgof1fmue5aeq7k61i6l7mg5gm",
-        },
-        body: "fields name",
-      };
-
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url, {
+          headers: {
+            "Client-ID": "zbjrsqbdwq9f0c2kgsc8fqynng1hwa",
+            Authorization: "Bearer 82bnqgof1fmue5aeq7k61i6l7mg5gm",
+          },
+          method: "POST",
+          body: "fields name, genres, screenshots.*; where id = (1,2,3,4,5,6,7,8,9,10,11,12); limit 20;",
+        });
 
         if (response.ok) {
           const json = await response.json();
@@ -42,7 +39,21 @@ function GamesList() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loader">
+        <div className="circles">
+          <span className="one"></span>
+          <span className="two"></span>
+          <span className="three"></span>
+        </div>
+        <div className="pacman">
+          <span className="top"></span>
+          <span className="bottom"></span>
+          <span className="left"></span>
+          <div className="eye"></div>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
@@ -53,15 +64,14 @@ function GamesList() {
     <div className="container-games-list">
       {games.map(function (game) {
         return (
-          <a key={game.id} href={`game/${game.id}`} className="games">
-            <img src={img} alt="logo" className="games-img" />
+          <a key={game.id} id={game.id} href={`game/${game.id}`} className="games">
+            <img src={game.screenshots[0].url} alt="logo" className="games-img" />
             <div className="games-title">
-              title of game
+              <div className="games-title-name">{game.name}</div>
               <FontAwesomeIcon icon={faCartShopping} className="games-icon" />
-              {game.id}
-              {game.name}
-              <button className="games-button">View more</button>
             </div>
+
+            <button className="games-button">View more</button>
           </a>
         );
       })}

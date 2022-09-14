@@ -1,37 +1,21 @@
 body {
   background-color: #1f2127;
   color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+.content-wrap {
+  padding-bottom: 35px;
 }
 .container {
   margin: auto;
   width: 100%;
   padding: 0px;
+  padding-bottom: 40px;
 }
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: none;
-}
-
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-video {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-.container-landingpage-form {
-  position: absolute;
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

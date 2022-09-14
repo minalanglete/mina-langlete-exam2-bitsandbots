@@ -6,7 +6,7 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart() {
   return (
-    <div className="container-cart">
+    <div className="container-cart content-wrap">
       <Heading title="Game cart" />
       <FontAwesomeIcon icon={faCartShopping} className="icon-cart" />
 

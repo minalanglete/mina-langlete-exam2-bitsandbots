@@ -34,21 +34,27 @@
     color: #fff;
     padding-bottom: 10px;
     margin-bottom: 30px;
+    width: 350px;
 
     .games-title {
       padding-left: 10px;
       padding-top: 10px;
-      width: 190px;
-      display: flex;
-      flex-wrap: wrap;
+      font-family: "Roboto Mono", monospace;
+      .games-title-name {
+        width: 320px;
+        height: 50px;
+        padding-left: 20px;
+      }
     }
     .games-icon {
-      padding-left: 55px;
-      padding-top: 5px;
+      padding-right: 20px;
+      float: right;
     }
     .games-button {
       background-color: #6820ff;
       color: #fff;
+      font-family: "Russo One", sans-serif;
+      letter-spacing: 2px;
       width: 150px;
       border: none;
       border-radius: 5px;
@@ -56,11 +62,13 @@
       font-size: 15px;
       position: relative;
       top: 20px;
-      left: 15px;
+      left: 90px;
     }
   }
   .games-img {
-    width: 200px;
+    width: 350px;
+    height: 150px;
+    object-fit: cover;
     background-color: #d922ff;
     border-radius: 10px 10px 0px 0px;
   }
