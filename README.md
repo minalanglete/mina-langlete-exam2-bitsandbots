@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+#Project Exam 2 Resit - Mina Langlete
+
+## This are the docs from React to strat the project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
