@@ -31,6 +31,9 @@
     font-family: "Roboto Mono", monospace;
     letter-spacing: 1px;
     padding-left: 35px;
+    @media (max-width: 770px) {
+      padding-left: 0px;
+    }
   }
 }
 .checkout {
@@ -48,5 +51,26 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 20px;
+  }
+}
+.container-cart {
+  @media (max-width: 770px) {
+    width: 200px;
+    margin-bottom: 50px;
+  }
+  .icon-cart {
+    @media (max-width: 770px) {
+      width: 200px;
+    }
+  }
+}
+.container-checkout {
+  @media (max-width: 770px) {
+    width: 300px;
+  }
+  .icon-checkout {
+    @media (max-width: 770px) {
+      width: 300px;
+    }
   }
 }

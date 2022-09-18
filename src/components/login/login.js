@@ -6,7 +6,7 @@ function LoginWithLocalStorage() {
   const getName = localStorage.getItem("name");
   const getPassword = localStorage.getItem("password");
   const handleSubmit = () => {
-    if (name.current.value == getName && password.current.value == getPassword) {
+    if (name.current.value === getName && password.current.value === getPassword) {
     }
   };
 

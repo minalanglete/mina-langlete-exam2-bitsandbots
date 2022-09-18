@@ -1,4 +1,4 @@
-#Project Exam 2 Resit - Mina Langlete
+# Project Exam 2 Resit - Mina Langlete
 
 ## This are the docs from React to strat the project
 

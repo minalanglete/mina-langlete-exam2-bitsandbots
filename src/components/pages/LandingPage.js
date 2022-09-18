@@ -3,7 +3,6 @@ import FormLogin from "../layout/FormLogin";
 import { Tab, Tabs } from "react-bootstrap";
 import video from "../../media/triangle.mp4";
 import Form from "../login/Registration";
-import Login from "../login/login";
 
 export default function LandingPage() {
   return (
@@ -25,10 +24,10 @@ export default function LandingPage() {
         <div className="landingpage-form">
           <Tabs defaultActiveKey="second" className="landingform-tabs">
             <Tab eventKey="first" title="Login" className="landingform-tab">
-              <Login />
+              <FormLogin />
             </Tab>
             <Tab eventKey="second" title="Registrer">
-              <p className="landingpage-registrer-text">make a profile</p>
+              <p className="landingpage-registrer-text">Registrer to sign in</p>
               <Form />
             </Tab>
           </Tabs>

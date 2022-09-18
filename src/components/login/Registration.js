@@ -24,7 +24,6 @@ class Register extends React.Component {
       password: this.state.password,
     };
     let olddata = localStorage.getItem("userdata");
-    console.log(olddata);
 
     if (olddata == null) {
       olddata = [];
@@ -39,31 +38,33 @@ class Register extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <div className="form-group">
-          <label>Name</label>
+      <form onSubmit={this.onSubmit} className="form-login">
+        <div className="form-login-line">
+          <label className="form-label">Name</label>
           <input
             type="text"
-            className="form-control"
+            className="form-input"
             value={this.state.name}
             onChange={this.onChangeName}
             required
           />
         </div>
 
-        <div className="form-group">
-          <label>Password</label>
+        <div className="form-login-line">
+          <label className="form-label">Password</label>
           <input
             type="password"
-            className="form-control"
+            className="form-input"
             value={this.state.password}
             onChange={this.onChangePassword}
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary btn-block" onClick={this.props.onRegister}>
-          Register
-        </button>
+        <div className="form-loginbutton-container">
+          <button type="submit" className="form-loginbutton-button" onClick={this.props.onRegister}>
+            Register
+          </button>
+        </div>
       </form>
     );
   }

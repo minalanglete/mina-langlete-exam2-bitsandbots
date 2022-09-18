@@ -2,6 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 }
 video {
   width: 100%;
@@ -18,6 +19,12 @@ video {
     padding: 0px;
     font-family: "Russo One", sans-serif;
     margin-bottom: 0px;
+    @media (max-width: 770px) {
+      font-size: 40px;
+    }
+    @media (max-width: 315px) {
+      font-size: 30px;
+    }
   }
   .landingpage-logo-slogan {
     font-family: "Roboto Mono", monospace;
@@ -25,33 +32,48 @@ video {
     font-weight: 400;
     padding-left: 230px;
     margin-top: -10px;
+    @media (max-width: 770px) {
+      font-size: 15px;
+      padding-left: 150px;
+    }
+    @media (max-width: 315px) {
+      font-size: 10px;
+    }
   }
 }
 .landingpage-registrer-text {
   text-align: center;
   padding-top: 30px;
-  padding-left: 20px;
+  padding-left: 70px;
   margin-bottom: -20px;
+  text-transform: uppercase;
+  @media (max-width: 993px) {
+    width: 200px;
+  }
 }
 .container-landingpage-form {
   position: absolute;
-  width: 80%;
   height: 100%;
-  margin: auto;
   top: 0;
+  padding-left: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  justify-items: center;
+  @media (max-width: 770px) {
+    padding-left: 10px;
+  }
 
   .landingpage-form {
     height: 500px;
-
     border: none;
 
     .tab-content {
       height: 200px;
       background-color: #6820ff;
+      @media (max-width: 993px) {
+        height: 350px;
+      }
     }
 
     .nav-tabs {
@@ -61,6 +83,9 @@ video {
     .landingform-tabs {
       width: 100%;
       gap: 40px;
+      @media (max-width: 993px) {
+        gap: 20px;
+      }
     }
 
     button {
@@ -73,6 +98,14 @@ video {
       padding: 10px 20px 10px 20px;
       font-weight: bold;
       width: 200px;
+      @media (max-width: 993px) {
+        width: 130px;
+        font-size: 15px;
+      }
+      @media (max-width: 290px) {
+        width: 110px;
+        font-size: 12px;
+      }
     }
     button:hover {
       color: #d922ff;
@@ -87,9 +120,15 @@ video {
   }
   .form-login {
     padding: 40px;
+    @media (max-width: 290px) {
+      padding: 20px;
+    }
 
     .form-loginbutton-container {
       padding-left: 130px;
+      @media (max-width: 993px) {
+        padding-left: 0px;
+      }
     }
 
     .form-loginbutton-button {
@@ -117,12 +156,14 @@ video {
       text-align: right;
       padding-right: 30px;
 
-      label {
+      label,
+      label.form-label {
         padding-right: 20px;
         font-family: "Roboto Mono", sans-serif;
         letter-spacing: 1px;
       }
-      input {
+      input,
+      input.form-input {
         border-radius: 5px;
         border: none;
         height: 40px;

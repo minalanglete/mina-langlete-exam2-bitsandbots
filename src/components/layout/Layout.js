@@ -12,32 +12,30 @@ function Layout() {
   return (
     <Router>
       <Navbar className="container-nav" variant="dark" expand="lg">
-        <div className="nav-line">
-          <div className="nav-line1">
-            <Navbar.Brand className="nav-logo">BITS & BOTS</Navbar.Brand>
+        <Container className="nav-line">
+          <Navbar.Brand className="nav-logo">BITS & BOTS</Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <NavLink to="/home" activeclassname="active" className="nav-link">
-                  Games
-                </NavLink>
-                <NavLink to="/cart" activeclassname="active" className="nav-link">
-                  Cart
-                </NavLink>
-              </Nav>
-              <div className="nav-button">
-                <button>
-                  <a href="/" className="button-logout">
-                    log out
-                  </a>
-                </button>
-              </div>
-            </Navbar.Collapse>
-          </div>
-          <div className="nav-line2">
-            <p className="nav-logo-slogan">Video game store</p>
-          </div>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto nav-line1">
+              <NavLink to="/home" activeclassname="active" className="nav-link">
+                Games
+              </NavLink>
+              <NavLink to="/cart" activeclassname="active" className="nav-link">
+                Cart
+              </NavLink>
+            </Nav>
+            <div className="nav-button">
+              <button>
+                <a href="/" className="button-logout">
+                  log out
+                </a>
+              </button>
+            </div>
+          </Navbar.Collapse>
+        </Container>
+        <div className="nav-line2">
+          <p className="nav-logo-slogan">Video game store</p>
         </div>
       </Navbar>
 

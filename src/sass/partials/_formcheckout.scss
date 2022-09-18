@@ -4,6 +4,12 @@
   width: 400px;
   text-align: right;
   font-family: "Roboto Mono", monospace;
+  @media (max-width: 770px) {
+    width: 200px;
+    padding-left: 50px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
 
   .form-checkout-line {
     padding-bottom: 15px;

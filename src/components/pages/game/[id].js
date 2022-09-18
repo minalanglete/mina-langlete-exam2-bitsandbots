@@ -71,8 +71,18 @@ function GameId() {
             <div className="game-title">
               <img src={game.screenshots[0].url} alt="logo" className="game-img" />
               <div className="game-title-name">{game.name}</div>
-              <p>{game.summary}</p>
-              <FontAwesomeIcon icon={faCartShopping} className="games-icon" /> add to cart
+              <p className="game-description">Discription:</p>
+              <p className="game-summary">{game.summary}</p>
+              <div className="game-addtocart">
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  className="game-addtocart-icon"
+                  onClick={() => {
+                    localStorage.setItem("addcartID", JSON.stringify(game.id));
+                  }}
+                />
+                <p className="game-addtocart-text">add to cart</p>
+              </div>
             </div>
           </div>
         );

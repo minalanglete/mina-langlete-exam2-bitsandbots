@@ -18,16 +18,18 @@ function FormLogin() {
       <div className="form-login-line">
         <label>username</label>
         <input {...register("userName", { required: true })} />
+        <br />
         {errors.userName && <span>Do you have a username?</span>}
       </div>
       <div className="form-login-line">
         <label>password</label>
         <input {...register("Password", { required: true })} />
+        <br />
         {errors.Password && <span>Password Please</span>}
       </div>
       <div className="form-loginbutton-container">
         <button className="form-loginbutton-button">
-          <a href="#">Login</a>
+          <a href="/home">Login</a>
         </button>
       </div>
     </form>

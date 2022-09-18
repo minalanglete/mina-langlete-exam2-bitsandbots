@@ -11,6 +11,10 @@
   height: 35px;
   border-top: 1px solid #757575;
   border-bottom: 1px solid #757575;
+  @media (max-width: 560px) {
+    flex-direction: column;
+    height: 70px;
+  }
 
   .footer-logo {
     font-family: "Russo One", sans-serif;
@@ -18,11 +22,15 @@
     float: left;
     color: #fff;
     margin-bottom: 0px;
+    text-align: center;
   }
   .footer-text {
     flex-grow: 2;
     text-align: center;
     margin-bottom: 0px;
     padding-top: 5px;
+    @media (max-width: 560px) {
+      font-size: 10px;
+    }
   }
 }
