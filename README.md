@@ -1,5 +1,7 @@
 # Project Exam 2 Resit - Mina Langlete
 
+![Screenshot 2022-09-18 at 20 23 23](https://user-images.githubusercontent.com/71304403/190922773-9ad54873-4832-4219-9fe2-eff744146158.png)
+
 ## Description
 
 This is a school project, it is a video game store page called Bits&Bots. I have build the site with React App and I have made a call to a API to get the content to my site. The deign and coding is all done my me.
