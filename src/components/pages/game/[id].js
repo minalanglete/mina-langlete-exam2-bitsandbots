@@ -10,36 +10,39 @@ function GameId() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { id } = useParams(id);
+  const { id } = useParams();
   //console.log(id);
 
-  useEffect(function () {
-    async function fetchData() {
-      try {
-        const response = await fetch(url, {
-          headers: {
-            "Client-ID": "zbjrsqbdwq9f0c2kgsc8fqynng1hwa",
-            Authorization: "Bearer 82bnqgof1fmue5aeq7k61i6l7mg5gm",
-          },
-          method: "POST",
-          body: "fields name, summary, screenshots.*; where id =(" + id + ");",
-        });
+  useEffect(
+    function () {
+      async function fetchData() {
+        try {
+          const response = await fetch(url, {
+            headers: {
+              "Client-ID": "zbjrsqbdwq9f0c2kgsc8fqynng1hwa",
+              Authorization: "Bearer 82bnqgof1fmue5aeq7k61i6l7mg5gm",
+            },
+            method: "POST",
+            body: "fields name, summary, screenshots.*; where id =(" + id + ");",
+          });
 
-        if (response.ok) {
-          const json = await response.json();
-          console.log(json);
-          setGames(json);
-        } else {
-          setError("An error occured");
+          if (response.ok) {
+            const json = await response.json();
+            console.log(json);
+            setGames(json);
+          } else {
+            setError("An error occured");
+          }
+        } catch (error) {
+          setError(error.toString());
+        } finally {
+          setLoading(false);
         }
-      } catch (error) {
-        setError(error.toString());
-      } finally {
-        setLoading(false);
       }
-    }
-    fetchData();
-  }, []);
+      fetchData();
+    },
+    [id]
+  );
 
   if (loading) {
     return (
