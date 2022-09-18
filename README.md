@@ -1,7 +1,5 @@
 # Project Exam 2 Resit - Mina Langlete
 
-![](../Screenshot%202022-09-18%20at%2020.23.23.png)
-
 ## Description
 
 This is a school project, it is a video game store page called Bits&Bots. I have build the site with React App and I have made a call to a API to get the content to my site. The deign and coding is all done my me.
@@ -11,7 +9,7 @@ This is a school project, it is a video game store page called Bits&Bots. I have
 - React App
 - API fetch
 - Sass for styling
-- Bootstarp for some coding
+- Bootstarp
 
 ## Getting Started
 
