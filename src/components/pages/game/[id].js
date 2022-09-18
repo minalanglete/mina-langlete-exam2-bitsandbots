@@ -10,8 +10,8 @@ function GameId() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { id } = useParams();
-  console.log(id);
+  const { id } = useParams(id);
+  //console.log(id);
 
   useEffect(function () {
     async function fetchData() {
