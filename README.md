@@ -1,6 +1,6 @@
 # Project Exam 2 Resit - Mina Langlete
 
-![](../Screenshot%202022-09-18%20at%2020.23.23.png)
+![Screenshot 2022-09-18 at 20 23 23](https://user-images.githubusercontent.com/71304403/190922773-9ad54873-4832-4219-9fe2-eff744146158.png)
 
 ## Description
 
